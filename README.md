@@ -67,13 +67,14 @@ CPU: 224 vCPU Intel(R) Xeon(R) Xeon(R) Platinum 8480C CPU @ 2.00GHz
 
 2. **decoder无监督预训练**：学习率为`0`到`2e-4`线性增长，在从`2e-4`以余弦衰减到`2e-5`的动态学习率，预训练时间为6小时（8张H100）。训练损失开始为8.875左右，最终为2.2左右： 
 
-![traing_pic](img/train_begin.png) 
+![traing_pic](img\train_begin.jpg) 
 
 ![traing_pic](img/train_end.png) 
 
 3. **prompt监督微调（SFT）**：使用`belle`指令训练数据集（指令和回答长度都在512以下），学习率从`0`到`1e-4`，之后以余弦衰减到`1e-5`的动态学习率，微调时间3个小时。微调损失开始为2.2左右，最终稳定在1.4左右： 
    
-![finetune_pic](img/sft_model_gen.png) 
+![finetune_pic](img/sft_model_gen.png)
+
 ![finetune_pic](img/sft_end.png) 
 
 
@@ -126,7 +127,7 @@ conda install --yes --file ./requirements.txt
 
 ### 3.2.3 下载预训练模型及模型配置文件
 
-暂未上传模型权重，还不能
+暂未上传模型权重，还不能进行使用
 
 
 ## 3.3 Tokenizer训练  
