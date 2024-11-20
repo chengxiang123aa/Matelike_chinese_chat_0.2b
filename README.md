@@ -67,12 +67,13 @@ CPU: 224 vCPU Intel(R) Xeon(R) Xeon(R) Platinum 8480C CPU @ 2.00GHz
 
 2. **decoder无监督预训练**：学习率为`0`到`2e-4`线性增长，在从`2e-4`以余弦衰减到`2e-5`的动态学习率，预训练时间为6小时（8张H100）。训练损失开始为8.875左右，最终为2.2左右： 
 
-![traing_pic](img/train_beign.png) 
+![traing_pic](img/train_begin.png) 
+
 ![traing_pic](img/train_end.png) 
 
 3. **prompt监督微调（SFT）**：使用`belle`指令训练数据集（指令和回答长度都在512以下），学习率从`0`到`1e-4`，之后以余弦衰减到`1e-5`的动态学习率，微调时间3个小时。微调损失开始为2.2左右，最终稳定在1.4左右： 
    
-![finetune_pic](img/sft_begian.png) 
+![finetune_pic](img/sft_model_gen.png) 
 ![finetune_pic](img/sft_end.png) 
 
 
@@ -83,7 +84,7 @@ CPU: 224 vCPU Intel(R) Xeon(R) Xeon(R) Platinum 8480C CPU @ 2.00GHz
 ## 2.4 现阶段对话效果展示
 ### 2.4.1 经过指令微调之后的模型效果展示
 默认使用`huggingface transformers`的 `AutoTokenizer`加载分词器，**load_state_dict**加载模型权重参数。
-![result_pic](/img/result.png)
+![result_pic](/img/sft_model_generate.png)
 
 
 
