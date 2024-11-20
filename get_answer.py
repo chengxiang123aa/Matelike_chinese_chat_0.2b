@@ -7,5 +7,6 @@ model = Chatbot(model_path,tokenizer_path)
 
 prompt = '你好！好久不见'
 
+
 answer = model.generate_reply(prompt)
 print(answer)
