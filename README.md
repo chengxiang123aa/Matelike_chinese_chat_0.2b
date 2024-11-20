@@ -2,7 +2,7 @@
 
 # 中文对话0.2B小模型 Matelike_Chinese_chat_0.2B 
 
-中文(./README.en.md)  
+中文(README.md)  
 
 </div>
  
