@@ -67,7 +67,7 @@ CPU: 224 vCPU Intel(R) Xeon(R) Xeon(R) Platinum 8480C CPU @ 2.00GHz
 
 2. **decoder无监督预训练**：学习率为`0`到`2e-4`线性增长，在从`2e-4`以余弦衰减到`2e-5`的动态学习率，预训练时间为6小时（8张H100）。训练损失开始为8.875左右，最终为2.2左右： 
 
-![traing_pic](img\train_begin.jpg) 
+![traing_pic](img\train_begin.png) 
 
 ![traing_pic](img/train_end.png) 
 
